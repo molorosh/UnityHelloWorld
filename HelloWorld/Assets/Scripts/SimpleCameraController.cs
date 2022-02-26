@@ -171,7 +171,7 @@ namespace UnityTemplateProjects
             // pretty lazy way of doing Hello World in Unity!!! :-o
             if (!_hasBeenDisplayed)
             {
-                Debug.Log("Hello, World!");
+                Debug.Log(HelloMessageMgr.HelloMessage);
                 _hasBeenDisplayed = true;
             }
 
