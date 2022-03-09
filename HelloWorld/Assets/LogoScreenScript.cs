@@ -29,6 +29,7 @@ public class LogoScreenScript : MonoBehaviour
         cameraPosition = this.gameObject.transform;
         startedAt = DateTime.Now;
         endedBy = startedAt.AddMilliseconds(delayMilliseconds);
+        ToDoMgr.Create();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class LogoScreenScript : MonoBehaviour
     {
         if (gameObject.transform.position.z > finishZ)
         {
-            Debug.Log(gameObject.transform.position.z);
+            //Debug.Log(gameObject.transform.position.z);
             Vector3 pos = gameObject.transform.position;
             pos.z += Time.deltaTime * incrementZ;
             gameObject.transform.position = pos;
